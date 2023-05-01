@@ -1,6 +1,6 @@
+@charset "UTF-8";
 :host {
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica,
-    Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   font-size: 14px;
   color: #333;
   box-sizing: border-box;
@@ -18,21 +18,26 @@ form {
   padding: 7rem;
   padding-top: 1%;
 }
+
 header h2 {
   padding-top: 2rem;
 }
+
 #user-img {
   width: 10%;
 }
+
 td img {
   width: 5rem;
   margin: auto;
   padding: 0%;
 }
+
 td {
   border: 0px;
   padding: 2rem;
 }
+
 tr:nth-child(odd) {
   background-color: #c6c6ca;
 }
@@ -40,7 +45,8 @@ tr:nth-child(odd) {
 #add_new_customer {
   float: right;
   margin: 3rem;
-  margin-inline-start: auto;
+  -webkit-margin-start: auto;
+          margin-inline-start: auto;
 }
 
 h1,
@@ -212,7 +218,7 @@ a:hover {
 }
 
 .terminal::before {
-  content: "\2022 \2022 \2022";
+  content: "•••";
   position: absolute;
   top: 0;
   left: 0;
@@ -304,25 +310,21 @@ svg#clouds {
   .terminal {
     width: 100%;
   }
-
   .card:not(.highlight-card) {
     height: 16px;
     margin: 8px 0;
   }
-
   .card.highlight-card span {
     margin-left: 72px;
   }
-
   svg#rocket-smoke {
     right: 120px;
     transform: rotate(-5deg);
   }
 }
-
 @media screen and (max-width: 575px) {
   svg#rocket-smoke {
     display: none;
     visibility: hidden;
   }
-}
+}/*# sourceMappingURL=app.component.css.map */

@@ -7,7 +7,18 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-
+td img {
+  width: 5rem;
+  margin: auto;
+  padding: 0%;
+}
+td {
+  border: 0px;
+  padding: 2rem;
+}
+tr:nth-child(odd) {
+  background-color: #c2c2d6;
+}
 h1,
 h2,
 h3,

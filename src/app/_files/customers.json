@@ -1,0 +1,29 @@
+[
+  {
+    "img": "profile.png",
+    "first_name": "Mina",
+    "last_name": "magdy",
+    "address": "342 fdsfj fds.",
+    "city": "cairo",
+    "state": "fdsfds",
+    "order_total": 4512.2
+  },
+  {
+    "img": "profile.png",
+    "first_name": "Kirolos",
+    "last_name": "yassa",
+    "address": "75 roksy st.",
+    "city": "giza",
+    "state": "henak",
+    "order_total": 7891.23
+  },
+  {
+    "img": "woman.png",
+    "first_name": "yasmin",
+    "last_name": "fawzy",
+    "address": "231 dsf afdsf.",
+    "city": "alex",
+    "state": "asdasaw",
+    "order_total": 574.5
+  }
+]

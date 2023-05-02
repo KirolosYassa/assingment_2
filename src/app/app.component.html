@@ -1,6 +1,13 @@
 <header>
   <img id="user-img" src="../assets/user.png" alt="" />
   <h2>Customers</h2>
+  <input
+    type="search"
+    placeholder="Search"
+    id="search"
+    (keypress)="handleSearch()"
+    (keyup)="handleSearch()"
+  />
   <button
     id="add_new_customer"
     class="btn btn-info"
@@ -17,6 +24,7 @@
       type="text"
       class="form-control"
       id="first_name"
+      [(ngModel)]="first_name"
       placeholder="Enter first name"
     />
     <label for="exampleInputEmail1">Last Name</label>
@@ -24,6 +32,7 @@
       type="text"
       class="form-control"
       id="last_name"
+      [(ngModel)]="last_name"
       placeholder="Enter Last name"
     />
     <label for="exampleInputEmail1">Address</label>
@@ -31,6 +40,7 @@
       type="text"
       class="form-control"
       id="address"
+      [(ngModel)]="address"
       placeholder="Enter Address"
     />
     <label for="exampleInputEmail1">City</label>
@@ -38,6 +48,7 @@
       type="text"
       class="form-control"
       id="city"
+      [(ngModel)]="city"
       placeholder="Enter City"
     />
     <label for="exampleInputEmail1">State</label>
@@ -45,6 +56,7 @@
       type="text"
       class="form-control"
       id="state"
+      [(ngModel)]="state"
       placeholder="Enter State"
     />
     <label for="exampleInputEmail1">Order Total</label>
@@ -52,6 +64,7 @@
       type="text"
       class="form-control"
       id="order_total"
+      [(ngModel)]="order_total"
       placeholder="Enter Order Total"
     />
   </div>
@@ -71,8 +84,18 @@
       <th scope="col">State</th>
       <th scope="col">Order Total</th>
     </thead>
-    <tbody>
-      <tr *ngFor="let customer of customersList">
+    <tbody *ngFor="let customer of customersList">
+      <tr
+        *ngIf="
+          searchText === '' ||
+          customer.first_name.includes(searchText) ||
+          customer.last_name.includes(searchText) ||
+          customer.address.includes(searchText) ||
+          customer.city.includes(searchText) ||
+          customer.state.includes(searchText) ||
+          customer.order_total.toString().includes(searchText)
+        "
+      >
         <td>
           <img src="../assets/{{ customer.img }}" alt="" />
         </td>
